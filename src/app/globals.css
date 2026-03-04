@@ -1,5 +1,6 @@
 /* src/app/globals.css */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* Your brand colors from style.css */
@@ -11,3 +12,5 @@
   --font-serif: "Merriweather", serif;
   --font-sans: "Inter", sans-serif;
 }
+
+
