@@ -1,4 +1,4 @@
-"use client"; // Required for hooks like useState and useEffect
+"use client";
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -9,49 +9,44 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // If scrolled more than 50px, change state
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header 
-      className={`fixed top-0 z-50 w-full transition-all duration-100 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-700 ease-in-out ${
         isScrolled 
-          ? "bg-white/10 backdrop-blur-md border-white py-3 rounded-b-3xl shadow-md" 
-          : "bg-transparent border-transparent py-6"
+          ? "bg-[#050505]/40 backdrop-blur-3xl border-b border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.5)] py-4" 
+          : "bg-gradient-to-b from-black/40 to-transparent border-transparent py-8"
       }`}
     >
-
       <div className="container mx-auto flex h-10 items-center justify-between px-6">
-        {/* Logo Section */}
-        <Link href="/" className="relative h-45 w-45 transition hover:opacity-80">
+        <Link href="/" className="relative h-45 w-45 transition-transform duration-700 hover:scale-105 hover:brightness-125 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
           <Image
-            src="/legal32_logoe.png" // Path to your logo in /public
+            src="/legal32_logoe.png"
             alt="LEGAL32 Logo"
             fill
             className="object-contain"
-            priority // Loads the logo immediately
+            priority
           />
         </Link>
 
-        {/* Navigation Links */}
         <nav className="hidden md:block">
-          <ul className={`flex items-center gap-10 text-sm font-bold uppercase tracking-widest transition-colors ${
-            isScrolled ? "text-slate-800" : "text-white"
-          }`}>
+          <ul className="flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.3em] text-zinc-300">
             <li>
-              <Link href="/about" className="hover:opacity-70 transition">About</Link>
+              <Link href="/about" className="relative group overflow-hidden pb-2 transition-colors duration-500 hover:text-amber-400">
+                About
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-amber-600 to-amber-300 -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
+              </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:opacity-70 transition">Contact</Link>
+              <Link href="/contact" className="relative group overflow-hidden pb-2 transition-colors duration-500 hover:text-amber-400">
+                Contact
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-amber-600 to-amber-300 -translate-x-[105%] group-hover:translate-x-0 transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"></span>
+              </Link>
             </li>
           </ul>
         </nav>
