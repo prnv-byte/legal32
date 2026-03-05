@@ -4,11 +4,13 @@
 
 @theme {
   /* Your brand colors from style.css */
-  --color-legal-navy: #0B132B; /* Darker, authoritative navy */
-  --color-legal-blue: #1E3A8A; /* Deep, trustworthy traditional blue */
+  --color-legal-navy: #0F172A;
+  --color-legal-blue: #3B82F6;
   --color-legal-slate: #334155;
   
   /* Your fonts */
   --font-serif: "Merriweather", serif;
   --font-sans: "Inter", sans-serif;
 }
+
+
