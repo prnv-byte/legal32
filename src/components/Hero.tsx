@@ -26,13 +26,17 @@ export default function Hero() {
 
           <div className="flex flex-col gap-6 sm:flex-row">
             <Link 
-              href="/contact" 
+              href="https://topmate.io/find_rahul/1593731" 
+              target='_blank'
+              rel="noopener noreferrer"
               className="group relative overflow-hidden rounded-sm border border-white/10 bg-white/[0.02] backdrop-blur-xl px-10 py-5 text-center text-[10px] font-black uppercase tracking-[0.3em] text-white transition-all duration-700 hover:border-amber-500/50 hover:bg-amber-600/10 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)]"
             >
               <span className="relative z-10 transition-colors duration-700 group-hover:text-amber-400">Book free Consultation</span>
             </Link>
             <Link 
-              href="/contact" 
+              href="https://topmate.io/find_rahul/1795553" 
+              target='_blank'
+              rel="noopener noreferrer"
               className="group rounded-sm border border-amber-600 bg-gradient-to-r from-amber-700 to-amber-500 px-10 py-5 text-center text-[10px] font-black uppercase tracking-[0.3em] text-white transition-all duration-700 hover:from-amber-600 hover:to-amber-400 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:-translate-y-1"
             >
               Book Detailed Consultation
