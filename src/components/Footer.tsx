@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Scale, Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,9 +9,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-12 mb-24">
           
           <div className="md:col-span-4 pr-10">
-            <Link href="/" className="flex items-center gap-4 text-2xl font-black text-white mb-8 group w-max">
-              <Scale className="text-amber-500 transition-transform duration-700 ease-out group-hover:-rotate-12 drop-shadow-[0_0_10px_rgba(245,158,11,0.3)]" size={28} />
-              <span className="font-serif tracking-widest font-light text-zinc-100">LEGAL32</span>
+            {/* Logo Image Replacement */}
+            <Link href="/" className="relative block h-14 w-48 mb-8 transition-transform duration-700 ease-out hover:scale-105 hover:brightness-125 drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+              <Image
+                src="/legal32_logoe.png"
+                alt="LEGAL32 Logo"
+                fill
+                className="object-contain object-left"
+              />
             </Link>
             <p className="text-zinc-500 text-sm leading-loose">
               Upholding the integrity of the Constitution and ensuring justice is accessible to every citizen.
@@ -42,7 +48,7 @@ export default function Footer() {
             <div className="space-y-4 mb-10">
               <div className="flex items-center gap-4 text-sm text-zinc-400">
                 <Mail size={14} className="text-amber-600" />
-                <span className="font-light tracking-wide hover:text-amber-400 transition-colors cursor-pointer">consult@legal32.com</span>
+                <span className="font-light tracking-wide hover:text-amber-400 transition-colors cursor-pointer">lawlegal32@gmail.com</span>
               </div>
               <div className="flex items-center gap-4 text-sm text-zinc-400">
                 <MapPin size={14} className="text-amber-600" />
@@ -54,7 +60,7 @@ export default function Footer() {
                 <Linkedin size={16} />
               </Link>
               <Link href="#" className="p-3 border border-white/5 bg-white/[0.02] text-zinc-500 hover:bg-amber-600/10 hover:border-amber-500/50 hover:text-amber-400 transition-all duration-500 rounded-sm">
-                <Twitter size={16} />
+                <Twitter size={16} href='www.instagram.com/calllegal32' />
               </Link>
             </div>
           </div>

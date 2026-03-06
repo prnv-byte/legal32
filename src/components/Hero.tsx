@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           <h1 className="mb-8 font-serif text-6xl md:text-8xl font-light tracking-tighter text-white leading-[1.05] drop-shadow-2xl">
             Fighting for the <br />
-            <span className="font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 drop-shadow-[0_0_15px_rgba(245,158,11,0.2)]">Justice you</span> <br />
+            <span className="font-bold italic text-transparent pr-3 pl-3 bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 drop-shadow-[0_0_15px_rgba(245,158,11,0.2)]">Justice you</span> <br />
             deserve.
           </h1>
           

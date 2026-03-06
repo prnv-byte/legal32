@@ -17,8 +17,9 @@ export default function Stats() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-24 text-center max-w-5xl mx-auto">
+          {/* Added pr-2 to the italic span to prevent clipping of the final 's' */}
           <h2 className="mb-8 font-serif text-3xl font-light leading-snug md:text-5xl text-zinc-100">
-            We are focused on legal awareness, analytical understanding, and <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600">informed perspectives</span>
+            We are focused on legal <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 pr-2">awareness, </span>analytical <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 pr-2"> understanding,  </span>and informed <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 pr-2"> perspectives</span>
           </h2>
           <p className="mx-auto max-w-2xl text-sm leading-loose text-zinc-400">
             Committed to enhancing legal awareness by exploring rights, remedies, and legal processes through constitutional and statutory perspectives.

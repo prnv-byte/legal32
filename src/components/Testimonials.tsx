@@ -23,7 +23,7 @@ export default function Testimonials() {
             ))}
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-light text-white mb-4">
-            Excellence <span className="font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600">Recognized</span>
+            Excellence <span className="font-bold italic text-transparent bg-clip-text pr-3 bg-gradient-to-r from-amber-200 to-amber-600">Recognized</span>
           </h2>
           <p className="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mt-6">
             Based on 50+ Real Client Representations

@@ -41,7 +41,7 @@ export default function PracticeAreas() {
 
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-center font-serif text-white text-5xl md:text-6xl font-light tracking-tight mb-24 drop-shadow-2xl">
-          Areas of <span className="font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600">Practice</span>
+          Areas of <span className="font-bold italic text-transparent bg-clip-text bg-gradient-to-r pr-3 from-amber-200 to-amber-600">Practice</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
