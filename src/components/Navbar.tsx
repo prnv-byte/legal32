@@ -44,9 +44,14 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
+              <Link href="/careers" className="relative group py-2 transition-colors duration-500 hover:text-amber-400 block">
+                Careers
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-amber-600 to-amber-300 scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="relative group py-2 transition-colors duration-500 hover:text-amber-400 block">
                 Contact
-                {/* Smoother scale-x animation originating from the left */}
                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-amber-600 to-amber-300 scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
               </Link>
             </li>

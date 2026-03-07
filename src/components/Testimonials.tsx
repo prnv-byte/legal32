@@ -1,9 +1,10 @@
 import { Star, Quote } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Testimonials() {
   const reviews = [
-    { name: "Upender Kumar", role: "Proprietor at Radiancy Electronics", text: "The team is excellent in figuring out solutions to every complex problems related to my business. They ensures to safeguard my firm from every corner with proper documentations and deeds." },
-    { name: "Mohit Pal", role: "Director at Ridepal Tour & Travels Private Limited", text: "The team at Legal 32 and Advocate Rahul K. Yadav are magicians in Business laws. They have helped me in incorporating my Company and getting all the mandatory registrations for it. Also, Mr. Rahul is no less in strategising a business, you may take a benefit of that." }
+    { name: "Upender Kumar", image: "/Image_up.jpg", role: "Proprietor at Radiancy Electronics", text: "The team is excellent in figuring out solutions to every complex problems related to my business. They ensures to safeguard my firm from every corner with proper documentations and deeds." },
+    { name: "Mohit Pal", image: "/Image_mohit.png", role: "Director at Ridepal Tour & Travels Private Limited", text: "The team at Legal 32 and Advocate Rahul K. Yadav are magicians in Business laws. They have helped me in incorporating my Company and getting all the mandatory registrations for it. Also, Mr. Rahul is no less in strategising a business, you may take a benefit of that." }
   ];
 
   return (
@@ -45,10 +46,13 @@ export default function Testimonials() {
               </p>
 
               <div className="flex items-center gap-6 pt-8 border-t border-white/5 relative z-10">
-                <div className="w-12 h-12 rounded-sm bg-black/50 border border-white/10 flex items-center justify-center shrink-0 shadow-inner">
-                  <span className="text-amber-600 font-serif font-bold text-lg">
-                    {review.name.charAt(0)}
-                  </span>
+                <div className="w-12 h-12 rounded-4xl bg-black/50 border border-white/10 overflow-hidden shrink-0 shadow-inner relative">
+                  <Image 
+                    src={review.image} 
+                    alt={`${review.name} profile`} 
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-zinc-200 uppercase tracking-widest text-[11px] mb-1">

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -30,6 +30,7 @@ export default function Footer() {
               <li><Link href="/practice-areas" className="hover:text-amber-400 transition-colors duration-300">Practice Areas</Link></li>
               <li><Link href="/blog" className="hover:text-amber-400 transition-colors duration-300">Articles</Link></li>
               <li><Link href="/contact" className="hover:text-amber-400 transition-colors duration-300">Contact</Link></li>
+              <li><Link href="/careers" className="hover:text-amber-400 transition-colors duration-300">Careers</Link></li>
             </ul>
           </div>
 
@@ -56,11 +57,8 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex gap-4">
-              <Link href="#" className="p-3 border border-white/5 bg-white/[0.02] text-zinc-500 hover:bg-amber-600/10 hover:border-amber-500/50 hover:text-amber-400 transition-all duration-500 rounded-sm">
-                <Linkedin size={16} />
-              </Link>
-              <Link href="#" className="p-3 border border-white/5 bg-white/[0.02] text-zinc-500 hover:bg-amber-600/10 hover:border-amber-500/50 hover:text-amber-400 transition-all duration-500 rounded-sm">
-                <Twitter size={16} href='www.instagram.com/calllegal32' />
+              <Link href="https://www.instagram.com/find_rahul?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/5 bg-white/[0.02] text-zinc-500 hover:bg-amber-600/10 hover:border-amber-500/50 hover:text-amber-400 transition-all duration-500 rounded-sm">
+                <Instagram size={16} />
               </Link>
             </div>
           </div>
