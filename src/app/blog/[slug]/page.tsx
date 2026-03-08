@@ -42,11 +42,11 @@ export default async function BlogPage({
       {/* Navigation (Simplified for Blog) */}
       <nav className="border-b border-white/5 py-8 mb-16 relative z-10 bg-[#050505]/80 backdrop-blur-xl">
         <div className="container mx-auto px-6 flex justify-between items-center max-w-4xl">
-          <Link href="/" className="text-xl font-serif tracking-widest font-light text-zinc-100 hover:text-white transition-colors">
-            LEGAL32
+          <Link href="" className="text-xl font-serif tracking-widest font-light text-zinc-100 hover:text-white transition-colors">
+             
           </Link>
-          <Link href="/#resources" className="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-500 hover:text-amber-400 transition-colors duration-500">
-            ← Back to Resources
+          <Link href=" " className="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-500 hover:text-amber-400 transition-colors duration-500">
+             
           </Link>
         </div>
       </nav>
