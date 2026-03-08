@@ -15,5 +15,15 @@ export const dynamic = 'force-static'
 export { metadata, viewport } from 'next-sanity/studio'
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  return (
+    <div className="min-h-screen bg-[#050505] selection:bg-amber-500/30 selection:text-amber-200">
+      {/* The Sanity Studio takes over the UI here, but wrapping it in our 
+        dark background prevents the harsh white flash on initial load, 
+        maintaining your premium editorial aesthetic.
+      */}
+      <div className="animate-fade-in duration-1000">
+        <NextStudio config={config} />
+      </div>
+    </div>
+  )
 }

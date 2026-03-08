@@ -31,47 +31,78 @@ export default async function BlogPage({
   }
 
   return (
-    <article className="min-h-screen bg-white pb-20">
+    <article className="min-h-screen bg-[#050505] pb-32 relative overflow-hidden">
+      
+      {/* Studio Lighting - Top Right Amber Glow */}
+      <div 
+        className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full pointer-events-none opacity-10 mix-blend-screen z-0"
+        style={{ background: 'radial-gradient(circle, rgba(180,83,9,0.3) 0%, rgba(0,0,0,0) 60%)' }}
+      ></div>
+
       {/* Navigation (Simplified for Blog) */}
-      <nav className="border-b border-slate-100 py-6 mb-12">
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-legal-navy">LEGAL32</Link>
-          <Link href="/#resources" className="text-sm font-semibold text-legal-blue hover:underline">
+      <nav className="border-b border-white/5 py-8 mb-16 relative z-10 bg-[#050505]/80 backdrop-blur-xl">
+        <div className="container mx-auto px-6 flex justify-between items-center max-w-4xl">
+          <Link href="/" className="text-xl font-serif tracking-widest font-light text-zinc-100 hover:text-white transition-colors">
+            LEGAL32
+          </Link>
+          <Link href="/#resources" className="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-500 hover:text-amber-400 transition-colors duration-500">
             ← Back to Resources
           </Link>
         </div>
       </nav>
 
-      <main className="container mx-auto max-w-3xl px-6">
+      <main className="container mx-auto max-w-3xl px-6 relative z-10">
+        
         {/* Header */}
-        <header className="mb-10 text-center">
-          <div className="mb-4 text-sm font-medium text-slate-500 uppercase tracking-widest">
-            Legal Resource • {new Date(post.publishedAt).toLocaleDateString('en-US', {
+        <header className="mb-20 text-center">
+          <div className="mb-8 text-[10px] font-black text-amber-500 uppercase tracking-[0.4em] drop-shadow-[0_0_10px_rgba(245,158,11,0.2)]">
+            Legal Insight • {new Date(post.publishedAt).toLocaleDateString('en-US', {
               month: 'long',
               day: 'numeric',
               year: 'numeric'
             })}
           </div>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-legal-navy leading-tight">
+          <h1 className="font-serif text-4xl md:text-6xl font-light text-white leading-tight drop-shadow-lg tracking-tight px-2">
             {post.title}
           </h1>
+          
+          {/* Elegant Separator Line */}
+          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mt-12 opacity-50"></div>
         </header>
 
-        {/* Blog Content */}
-        <div className="prose prose-lg prose-slate max-w-none 
-          prose-headings:font-serif prose-headings:text-legal-navy 
-          prose-a:text-legal-blue prose-strong:text-legal-navy">
+        {/* Blog Content (Premium Dark Prose) */}
+        <div className="prose prose-lg prose-invert max-w-none 
+          prose-headings:font-serif prose-headings:font-light prose-headings:text-zinc-100 prose-headings:tracking-tight
+          prose-p:text-zinc-400 prose-p:font-light prose-p:leading-loose
+          prose-a:text-amber-500 hover:prose-a:text-amber-400 prose-a:transition-colors
+          prose-strong:text-zinc-200 prose-strong:font-bold
+          prose-blockquote:border-amber-600/50 prose-blockquote:text-zinc-300 prose-blockquote:font-serif prose-blockquote:italic
+          prose-li:text-zinc-400">
           <PortableText value={post.content} />
         </div>
         
         {/* Call to Action */}
-        <footer className="mt-16 rounded-2xl bg-slate-50 p-8 text-center border border-slate-100">
-          <h3 className="text-xl font-serif font-bold text-legal-navy mb-2">Need specific legal advice?</h3>
-          <p className="text-slate-600 mb-6">Our consultations are free and strictly confidential.</p>
-          <Link href="/#contact" className="inline-block rounded-lg bg-legal-navy px-8 py-3 text-white font-semibold transition hover:bg-slate-800">
-            Book Free Consultation
-          </Link>
+        <footer className="mt-32 rounded-sm bg-white/[0.02] p-12 md:p-16 text-center border border-white/5 backdrop-blur-xl relative group overflow-hidden">
+          
+          {/* Subtle Hover Glow on CTA */}
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-600/5 to-transparent opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0"></div>
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl font-serif font-light text-white mb-6 tracking-tight">
+              Need specific <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 pr-2">legal advice?</span>
+            </h3>
+            <p className="text-zinc-400 mb-10 font-light leading-loose max-w-lg mx-auto">
+              Our consultations are strictly confidential and tailored to your unique constitutional or civil matter.
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-block rounded-sm border border-amber-600 bg-gradient-to-r from-amber-700 to-amber-500 px-10 py-5 text-[10px] font-black uppercase tracking-[0.3em] text-white transition-all duration-700 hover:from-amber-600 hover:to-amber-400 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:-translate-y-1"
+            >
+              Book Free Consultation
+            </Link>
+          </div>
         </footer>
+
       </main>
     </article>
   );

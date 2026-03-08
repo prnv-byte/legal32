@@ -3,8 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -14,6 +16,11 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Hide the Navbar completely on Sanity Studio routes
+  if (pathname?.startsWith('/studio')) {
+    return null;
+  }
 
   return (
     <header 
@@ -37,9 +44,14 @@ export default function Navbar() {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.3em] text-zinc-300">
             <li>
+              <Link href="/" className="relative group py-2 transition-colors duration-500 hover:text-amber-400 block">
+                Home
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-amber-600 to-amber-300 scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="relative group py-2 transition-colors duration-500 hover:text-amber-400 block">
                 About
-                {/* Smoother scale-x animation originating from the left */}
                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-amber-600 to-amber-300 scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
               </Link>
             </li>
