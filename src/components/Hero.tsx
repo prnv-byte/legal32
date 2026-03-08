@@ -20,9 +20,6 @@ export default function Hero() {
             deserve.
           </h1>
           
-          <p className="mb-14 max-w-xl text-lg font-light text-zinc-400 border-l-[1px] border-amber-600/50 pl-6 leading-relaxed">
-            The site is under construction. Thanks for your cooperation.
-          </p>
 
           <div className="flex flex-col gap-6 sm:flex-row">
             <Link 
@@ -44,7 +41,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-12 left-0 w-full px-6 flex items-center justify-between opacity-50">
+        <div className="absolute bottom-20 left-0 w-full px-6 flex items-center justify-between opacity-90">
           <p className="font-serif text-sm italic tracking-widest text-zinc-500">
             A Duty towards nation to protect the Rights of Every Citizen
           </p>
